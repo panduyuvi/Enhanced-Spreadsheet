@@ -1,0 +1,236 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.page-action-cont {
+    height: 3rem;
+    background-color: #218c74;
+    display: flex;
+    align-items: flex-end;
+    padding-left: 1rem;
+}
+
+.page-action {
+    margin: 0.5rem;
+    color: #f1f2f6;
+}
+
+.cellprop-action-cont {
+    height: 3rem;
+    background-color: lightseagreen;
+    display: flex;
+    align-items: center;
+    padding-left: 1rem;
+}
+
+.cellprop-action-cont > * {
+    display: inline;
+    margin-right: 1rem;
+    padding-left: 1rem;
+}
+
+.cell {
+    height: 2rem;
+    width: 5rem;
+    border: 1px solid #dfe4ea;
+    outline: none;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.cellprop-action-cont > select {
+    border: none;
+    border-radius: 2px;
+    outline: none;
+}
+
+.cellprop-action-cont > *:hover {
+    cursor: pointer;
+}
+
+.font-family-prop {
+    padding: 0.2rem;
+}
+
+.font-size-prop {
+    padding: 0.2rem;
+    font-size: 12px;
+}
+
+.formula-action-cont {
+    height: 2rem;
+    background-color: lightblue;
+    padding-left: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.formula-action-cont > {
+    display: inline-block;
+    margin-right: 0.7rem;
+}
+
+.formula-action-cont > input {
+    border: none;
+    outline: none;
+    height: 70%;
+}
+
+.address-bar {
+    width: 5rem;
+    margin-right: 1rem;
+}
+
+.add-col {
+    height: 2rem;
+    width: 2rem;
+    border: 1px solid #dfe4ea;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.add-row {
+    height: 2rem;
+    width: 5rem;
+    border: 1px solid #dfe4ea;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.formula-bar {
+    width: 71rem;
+}
+
+.sheet-action-cont {
+    height: 3rem;
+    background-color: lightcoral;
+    display: flex;
+    align-items: center;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+
+.sheet-action-cont > * {
+    display: inline-block;
+}
+
+.sheet-add-icon {
+    width: 3vw;
+}
+
+.grid-cont {
+    height: 27.5rem;
+    position: relative;
+    overflow: scroll;
+    background-color: #ecf0f1;
+}
+
+.top-left-dummy {
+    height: 2rem;
+    width: 2rem;
+    position: fixed;
+    z-index: 5;
+    background-color: #747d8c;
+}
+
+.cell-cont {
+    position: absolute;
+    top: 0;
+    left: 2rem;
+}
+
+.add-col-cont {
+    position: sticky;
+    top: 2rem;
+    left: 0;
+}
+
+.add-row-cont {
+    position: sticky;
+    top: 0;
+    left: 2rem;
+    display: flex;
+}
+
+.sheet-folder-cont {
+    display: flex;
+    align-items: center;
+    height: 2rem;
+    width: 80rem;
+    display: inline-block;
+    background-color: rgb(218, 218, 211);
+    width: calc(100vw - 2rem);
+    gap: 1rem;
+}
+
+.sheet-folder {
+    align-items: center;
+    text-decoration: underline;
+    font-weight: bold;
+    text-decoration-thickness: 4rem;
+    font-size: 0.9rem;
+}
+
+.row-cont {
+    display: flex;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px; /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    -moz-osx-font-smoothing: grayscale;
+    font-feature-settings: 'liga';
+}
+
+.color-prop {
+    position: relative;
+}
+
+.color-prop > input {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
+/* Added 3D animation effect */
+
+/* Apply 3D transform to create a subtle depth effect */
+.cell, .add-col, .add-row {
+    transition: transform 0.2s ease-in-out;
+}
+
+/* Apply the transformation on hover */
+.cell:hover, .add-col:hover, .add-row:hover {
+    transform: translateZ(4px);
+}
+
+/* Apply a shadow to simulate a lifted appearance */
+.cell:hover, .add-col:hover, .add-row:hover,
+.color-prop > input:focus + .material-icons,
+.material-icons:hover {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}

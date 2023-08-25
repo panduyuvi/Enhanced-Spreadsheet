@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excel clone</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+</head>
+<body>
+    
+    <div class="page-action-cont">
+        <div class="page-action">Home</div>
+        <div class="page-action">File</div>
+        <div class="page-action">Insert</div>
+        <div class="page-action">Layout</div>
+        <div class="page-action">Help</div>
+    </div>
+    <div class="cellprop-action-cont">
+        <span class="material-icons">&#xe14d;</span>
+        <span class="material-icons">&#xe14f;</span>
+        <span class="material-icons">&#xe14e;</span>
+        <select class="font-family-prop">
+                <option value="monospace">monospace</option>
+                <option value="sans-serif">sans-serif</option>
+                <option value="Times New Roman">Times New Roman</option>
+
+
+
+
+        </select>
+
+        <select class="font-size-prop">
+            <option value="8">8</option>
+            <option value="14">14</option>
+            <option value="16">16</option>
+            <option value="18">18</option>
+            <option value="20">20</option>
+            <option value="22">22</option>
+        </select>
+        <span class="material-icons bold">&#xe238;</span>
+        <span class="material-icons italic">&#xe23f;</span>
+        <span class="material-icons underline">&#xe249;</span>
+        <span class="left material-icons alignment">&#xe236;</span>
+        <span class=" center material-icons alignment">&#xe234;</span>
+        <span class="right material-icons  alignment">&#xe237;</span>
+
+        
+        <div class="color-prop">
+            <span class="material-icons">&#xe23c;</span>
+            <input type="color" class="font-color-prop">
+        </div>
+
+
+        <div class="color-prop">
+            <span class="material-icons">&#xe23a;</span>
+            <input type="color" class="BGcolor-prop">
+        </div>
+       
+
+        
+             
+    </div>
+    <div class="formula-action-cont">
+      <input type="text" readonly class="address-bar">
+      <img width="20" height="20" src="https://img.icons8.com/windows/32/formula-fx.png" alt="formula-fx"/>
+      <input type="text" class="formula-bar">
+
+
+    </div>
+    <div class="grid-cont">
+        <div class="top-left-dummy">
+            
+        </div>
+        <div class="add-col-cont">
+
+        </div>
+       
+        <div class="cell-cont">
+
+
+            <div class="add-row-cont">  </div>
+
+            <div class="cell-add">
+
+            </div>
+
+        </div>
+    </div>
+    <div class="sheet-action-cont">
+
+        <div class="sheet-add-icon">
+            <span class="material-icons">&#xea20;</span>
+        </div>
+       
+       
+     
+
+
+        <div class="sheet-folder-cont">
+          
+
+            <div class="sheet-folder">
+                sheet1
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="./grid.js"></script>
+    <script src="./cell-prop.js"></script>
+    <script src="./cyclevalidstion.js"></script>
+    <script src="./cyclicpathtrace.js"></script>
+    <script src="./formula.js"></script>
+</body>
+</html>
